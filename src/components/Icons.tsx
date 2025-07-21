@@ -125,7 +125,7 @@ export const IconChevronDown = () => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="w-5 h-5"
+    className="w-4 h-4"
   >
     <path d="m6 9 6 6 6-6" />
   </svg>
@@ -156,10 +156,10 @@ export const IconChevronRight = () => (
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
-    strokeWidth="4"
+    strokeWidth="3"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="w-5 h-5"
+    className="w-4 h-4"
   >
     <polyline points="9 18 15 12 9 6" />
   </svg>

@@ -36,12 +36,12 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
       path: "/shop",
       hasDropdown: true,
       dropdownItems: [
-        { name: "Meja", img: "/images/kursi-1.jpg", path: "/shop/meja" },
-        { name: "Kursi", img: "/images/kursi-2.jpg", path: "/shop/kursi" },
-        { name: "Lemari", img: "/images/sofa-1.jpg", path: "/shop/lemari" },
-        { name: "Rak", img: "/images/sofa-2.jpg", path: "/shop/rak" },
-        { name: "Sofa", img: "/images/sofa-3.jpg", path: "/shop/sofa" },
-        { name: "Lainnya", img: "", path: "/shop" },
+        { name: "Tables", img: "/images/kursi-1.jpg", path: "/shop/table" },
+        { name: "Chairs", img: "/images/kursi-2.jpg", path: "/shop/chair" },
+        { name: "Cabinet", img: "/images/sofa-1.jpg", path: "/shop/cabinet" },
+        { name: "Shelf", img: "/images/sofa-2.jpg", path: "/shop/shelf" },
+        { name: "Couch", img: "/images/sofa-3.jpg", path: "/shop/couch" },
+        { name: "Others", img: "", path: "/shop" },
       ],
     },
     { page: "Blog", path: "/blog" },
@@ -154,11 +154,11 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
             className="relative flex justify-center items-center w-full h-full hover:underline hover:underline-offset-2 group"
           >
             <div>
-              Gerai kami di Jl. Jawa No.2 GKB buka setiap hari pukul 10:00 -
-              19:00
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed natus
+              harum fugiat.
             </div>
             <div className="absolute flex left-auto right-6 justify-start items-center">
-              <div>Pusat bantuan</div>
+              <div>Help center</div>
               <span className="group-hover:rotate-45 transition-all duration-200 ease-in-out">
                 <IconArrowRightUp />
               </span>
@@ -182,11 +182,11 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
             {/* Desktop Menu */}
             <div className="flex">
               {/* Logo */}
-              <a href="/" className="flex-shrink-0 flex items-center gap-x-1">
+              <a href="/" className="flex-shrink-0 flex items-center">
                 <img
-                  src="/logo.png"
+                  src="/dummy-logo.png"
                   alt="Logo"
-                  className="h-12 w-12 md:w-16 md:h-16"
+                  className="w-12 h-12 md:h-16 md:w-16"
                 />
               </a>
 
@@ -414,7 +414,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
               href="#"
               className="inline-flex items-center gap-x-1 mt-2 text-blue-600 hover:underline"
             >
-              Pusat bantuan
+              Help center
               <IconArrowRightUp />
             </a>
           </div>

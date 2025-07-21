@@ -8,14 +8,14 @@ const currentPath = Astro.url.pathname;
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/dummy-logo.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Future Furniture</title>
   </head>
   <body class="h-[2000px] bg-sand-gray">
     <Navbar currentPath={currentPath} client:load />
-    <div class="h-22 md:h-36 w-full"></div>
+    <div class="h-22 md:h-32 w-full"></div>
     <section class="px-4 md:px-8">
       <slot />
     </section>
