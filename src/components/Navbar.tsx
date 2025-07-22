@@ -341,7 +341,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
                 <div>
                   <button
                     onClick={toggleMobileDropdown}
-                    className={`w-full flex items-center justify-between py-4 text-left font-medium text-lg ${
+                    className={`w-full flex items-center justify-between py-2 text-left font-medium text-lg ${
                       isActive(item.path) ? "text-blue-600" : "text-gray-900"
                     }`}
                   >
@@ -394,7 +394,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
                 <a
                   href={item.path}
                   onClick={handleLinkClick}
-                  className={`block py-2 text-lg font-semibold ${
+                  className={`block py-2 text-lg font-medium ${
                     isActive(item.path) ? "text-blue-600" : "text-gray-900"
                   }`}
                 >
