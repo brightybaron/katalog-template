@@ -1,6 +1,9 @@
 ---
 import Button from "@components/Button.astro";
 import { IconArrowRightUp } from "@components/Icons";
+import ParallaxSection from "@components/ParallaxSection";
+// import ParallaxSection from "@components/ParallaxSection.astro";
+import WrapperSection from "@components/WrapperSection.astro";
 import MainLayout from "@layouts/MainLayout.astro";
 
 const itemList = [
@@ -25,6 +28,24 @@ const itemList = [
     price: "€2,671",
   },
 ];
+
+const wrap1 = {
+  title: "Our most popular setup for only €2,671",
+  description:
+    "The handleless island (small) measures 240x100cm and is our most popular configuration. Customize it completely to your liking. Not what you're looking for? Scroll down for more popular configurations.",
+  btnText: "start with this setup",
+  btnPath: "/shop/cabinet",
+  image: "/images/kursi-1.jpg",
+};
+
+const wrap2 = {
+  title: "Our most popular setup for only €2,671",
+  description:
+    "The handleless island (small) measures 240x100cm and is our most popular configuration. Customize it completely to your liking. Not what you're looking for? Scroll down for more popular configurations.",
+  btnText: "start assembling",
+  btnPath: "/shop/",
+  image: "",
+};
 ---
 
 <MainLayout pageTitle="Home">
@@ -40,29 +61,8 @@ const itemList = [
   </div>
 
   <!-- Opener -->
-  <section class="max-w-7xl mt-20">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div
-        class="self-center order-last md:order-first space-y-4 w-full md:w-3/4"
-      >
-        <h2 class="text-3xl md:text-6xl font-semibold">
-          Our most popular setup for only €2,671
-        </h2>
-        <p class="font-medium">
-          The handleless island (small) measures 240x100cm and is our most
-          popular configuration. Customize it completely to your liking. Not
-          what you're looking for? Scroll down for more popular configurations.
-        </p>
-        <Button text="start with this setup" path="/shop/cabinet" />
-      </div>
-      <div class="shadow-lg">
-        <img
-          src="/images/kursi-1.jpg"
-          alt="Kursi 1"
-          class="w-full h-full object-cover rounded-lg"
-        />
-      </div>
-    </div>
+  <section class="max-w-7xl mt-20 mx-auto px-4 md:px-8">
+    <WrapperSection {...wrap1} />
     <div
       class="mt-12 hidden md:flex items-center gap-x-1 group ml-auto w-fit text-amber-900 text-sm font- tracking-tighter"
     >
@@ -85,7 +85,9 @@ const itemList = [
   <div
     class="overflow-hidden whitespace-nowrap text-stone-500 text-sm py-4 my-12 border-t border-b border-stone-500"
   >
-    <div class="inline-block animate-marquee space-x-36 min-w-full">
+    <div
+      class="inline-block animate-marquee space-x-12 md:space-x-36 min-w-full"
+    >
       <span>5 years guarantee</span>
       <span>4.8/5 rating</span>
       <span>Clear production times</span>
@@ -97,14 +99,14 @@ const itemList = [
     </div>
   </div>
 
-  <section class="max-w-7xl">
+  <section class="max-w-7xl mx-auto px-4 md:px-8">
     <!-- Popular Items -->
     <!-- Header -->
     <div class="grid grid-cols-1 md:grid-cols-2">
       <h2 class="text-3xl md:text-6xl font-semibold">More popular setup</h2>
-      <div class="flex justify-start md:justify-center items-center">
+      <div class="flex justify-start md:justify-end items-center">
         <div
-          class="max-w-60 flex md:justify-center items-center gap-4 h-8 md:h-12 text-stone-400 my-4 md:my-10"
+          class="max-w-60 flex md:justify-center items-center gap-4 h-8 md:h-12 text-stone-400 mt-10 md:mt-0"
         >
           <img src="/dummy-logo.png" alt="" class="h-full grayscale" />
           <p class="text-xs md:text-sm">
@@ -148,21 +150,34 @@ const itemList = [
 
     <!-- Option -->
     <div class="mt-24 h-3/4">
-      <div class="flex gap-8">
-        <div
-          class="self-center order-last md:order-first space-y-4 w-full md:w-2/3"
-        >
-          <h2 class="text-3xl md:text-6xl font-semibold">
-            Would you rather put it together yourself from the start?
-          </h2>
-          <p class="font-medium">
-            Our online kitchen configurator is specially designed to unleash
-            your creativity. Whether you're technically savvy or not, this tool
-            makes it easy to put together all the necessary components.
-          </p>
-          <Button text="start assembling" path="/shop/cabinet" />
+      <WrapperSection {...wrap2} />
+    </div>
+  </section>
+
+  <!-- Parallax -->
+  <div class="relative h-[110dvh] my-20">
+    <div class="absolute h-full w-full overflow-hidden">
+      <!-- Background image  -->
+      <ParallaxSection client:load image="/images/sofa-3.jpg" />
+
+      <div class="absolute inset-0 bg-black/45"></div>
+    </div>
+
+    <!-- Text content -->
+    <div class="relative h-[110dvh] flex items-center px-4 md:px-8">
+      <div class="w-4/5 md:w-1/3">
+        <h2 class="text-5xl md:text-6xl font-semibold text-white">
+          Visit Our Showroom
+        </h2>
+        <p class="font-medium text-white text-lg mt-24">
+          If you can't find what you're looking for online, you can also
+          schedule an appointment with one of our kitchen experts. They will
+          then reserve time to assist you and help you fill your shopping cart.
+        </p>
+        <div class="mt-16">
+          <Button text={"make an appointment"} path={"/#"} />
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </MainLayout>

@@ -18,8 +18,6 @@ const currentPath = Astro.url.pathname;
   <body class="bg-sand-gray">
     <Navbar currentPath={currentPath} client:load />
     <div class="h-22 md:h-32 w-full"></div>
-    <section class="px-4 md:px-8">
-      <slot />
-    </section>
+    <slot />
   </body>
 </html>

@@ -1,0 +1,36 @@
+---
+// Props
+const { image } = Astro.props;
+---
+
+<!-- Container -->
+<div class="relative h-[110vh] my-20">
+  <!-- Parallax image wrapper -->
+  <div class="absolute inset-0 h-full w-full overflow-hidden">
+    <img src={image} alt="" class="parallax-image" loading="lazy" />
+    <div class="absolute inset-0 bg-black/25 z-5"></div>
+  </div>
+
+  <!-- Text content -->
+  <div
+    class="relative z-10 h-[120vh] flex items-center justify-center px-4 md:px-8"
+  >
+    <h1 class="text-4xl md:text-6xl text-center font-semibold text-white z-10">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, iste!
+    </h1>
+  </div>
+</div>
+
+<!-- Script to initialize SimpleParallax -->
+<script type="module">
+  import SimpleParallax from "simple-parallax-js";
+
+  const image = document.querySelector(".parallax-image");
+
+  const instance = new SimpleParallax(image, {
+    delay: 0,
+    scale: 1.5,
+  });
+
+  instance.destroy();
+</script>
