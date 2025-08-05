@@ -139,7 +139,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
       <nav
         className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 bg-white md:bg-transparent transition-all ease-linear duration-300 mt-2 md:mt-0 w-[95%] rounded-full md:rounded-none ${
           scrollPosition ? "md:w-[90%]" : "md:w-full"
-        }`}
+        } `}
         aria-label="Navigation"
       >
         <div
@@ -199,6 +199,14 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
                       isActive(item.path)
                         ? "after:scale-x-100"
                         : "after:scale-x-0 after:origin-center"
+                    } ${
+                      currentPath === "/about"
+                        ? !scrollPosition
+                          ? !isDropDownOpen
+                            ? "text-white"
+                            : "text-black"
+                          : "text-black"
+                        : "text-black"
                     }`}
                   >
                     {item.hasDropdown ? (
@@ -218,25 +226,6 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
                             <IconChevronDown />
                           </div>
                         </div>
-                        {/* {isDropDownOpen && (
-                          <div className="absolute w-48 bg-white rounded-lg shadow-lg border z-30">
-                            <div className="p-2">
-                              {item.dropdownItems?.map((dropdownItem, idx) => (
-                                <a
-                                  key={idx}
-                                  href={dropdownItem.path}
-                                  className={`block px-4 py-2 rounded-md transition-colors ${
-                                    isDropdownItemActive(dropdownItem.path)
-                                      ? "text-black font-bold bg-gray-100"
-                                      : "text-gray-700 hover:bg-gray-100"
-                                  }`}
-                                >
-                                  {dropdownItem.name}
-                                </a>
-                              ))}
-                            </div>
-                          </div>
-                        )} */}
                       </div>
                     ) : (
                       <a href={item.path}>{item.page}</a>
@@ -290,7 +279,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
                   ?.dropdownItems?.map((dropdownItem, idx) => (
                     <a key={idx} href={dropdownItem.path}>
                       <div
-                        className={`aspect-square flex items-center justify-center overflow-hidden bg-gray-200 group w-48`}
+                        className={`aspect-square flex items-center justify-center overflow-hidden bg-gray-200 group w-full`}
                       >
                         {dropdownItem.img ? (
                           <img
@@ -327,10 +316,10 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
             : "-translate-y-[100%] pointer-events-none"
         }`}
       >
-        {/* Header space to account for navbar */}
+        {/* Mobile Header space to account for navbar */}
         <div className="h-20"></div>
 
-        {/* Menu Items */}
+        {/* Mobile Menu Items */}
         <div className="flex-1 overflow-y-auto px-6 py-4">
           {listMenu.map((item, index) => (
             <div
@@ -342,7 +331,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
                   <button
                     onClick={toggleMobileDropdown}
                     className={`w-full flex items-center justify-between py-2 text-left font-medium text-lg ${
-                      isActive(item.path) ? "text-blue-600" : "text-gray-900"
+                      isActive(item.path) ? "text-blue-900" : "text-gray-900"
                     }`}
                   >
                     <span>{item.page}</span>
@@ -405,7 +394,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
           ))}
         </div>
 
-        {/* Footer section */}
+        {/* Mobile Footer section */}
         <div className="border-t border-gray-200 p-6">
           <div className="text-center text-gray-600 text-sm">
             <p>Our showroom in GKB is open today</p>

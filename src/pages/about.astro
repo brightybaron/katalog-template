@@ -1,0 +1,36 @@
+---
+import Button from "@components/Button.astro";
+import MainLayout from "@layouts/MainLayout.astro";
+---
+
+<MainLayout pageTitle="About">
+  <section class="relative h-screen w-full">
+    <div class="absolute w-full h-full overflow-hidden">
+      <div
+        class="relative w-full h-full bg-cover bg-center bg-no-repeat"
+        style="background-image: url('/images/sofa-2.jpg')"
+      >
+        <div class="absolute inset-0 bg-black/50"></div>
+      </div>
+    </div>
+    <div
+      class="relative w-full h-full flex flex-col justify-end items-start px-4 sm:px-12 bottom-12 2xl:bottom-20"
+    >
+      <div class="w-3/4 lg:w-1/2 space-y-8">
+        <h1 class="font-semibold text-5xl md:text-7xl text-white">
+          Lorem ipsum dolor sit amet consectetur
+        </h1>
+        <p class="text-lg font-medium text-white">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+          necessitatibus. Itaque quisquam aliquid voluptatum assumenda eos.
+          Quasi aliquid aliquam sit dolorem modi atque accusantium voluptates, a
+          laboriosam illo vel adipisci cumque necessitatibus? Quaerat adipisci
+          fugit id eius vitae molestias. Illo.
+        </p>
+        <div class="mt-8">
+          <Button text="View popular lineups" path="/shop/popular" />
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
