@@ -11,6 +11,7 @@
 @theme {
   --font-sans: "Hanken Grotesk", sans-serif;
   --color-sand-gray: #efefed;
+  --color-dark-green: #212220;
   --animate-marquee: marquee 40s linear infinite;
   @keyframes marquee {
     0% {

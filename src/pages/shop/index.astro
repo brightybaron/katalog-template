@@ -1,0 +1,155 @@
+---
+import ProductCardGrid from "@components/ProductCardGrid.astro";
+import ProductCardList from "@components/ProductCardList.astro";
+import MainLayout from "@layouts/MainLayout.astro";
+---
+
+<MainLayout pageTitle="Shop">
+  <div class="px-4 lg:px-12 mt-8">
+    <div class="flex justify-between items-center">
+      <h1 class="text-4xl font-semibold">Shop</h1>
+
+      <!-- View Toggle Buttons -->
+      <div class="flex border border-gray-300 rounded-lg overflow-hidden">
+        <button
+          id="gridViewBtn"
+          class="px-4 py-2 bg-dark-green text-white hover:bg-gray-600 transition-all duration-300 flex items-center gap-2"
+        >
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M3 4a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm6 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V4zM3 12a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H4a1 1 0 01-1-1v-4zm6 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"
+              clip-rule="evenodd"></path>
+          </svg>
+          Grid
+        </button>
+        <button
+          id="listViewBtn"
+          class="px-4 py-2 bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all duration-300 flex items-center gap-2"
+        >
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M3 4a1 1 0 000 2h14a1 1 0 100-2H3zm0 4a1 1 0 000 2h14a1 1 0 100-2H3zm0 4a1 1 0 000 2h14a1 1 0 100-2H3z"
+              clip-rule="evenodd"></path>
+          </svg>
+          List
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <section class="px-4 lg:px-12 mt-12">
+    <!-- Container with smooth transitions -->
+    <div class="relative overflow-hidden">
+      <!-- Grid View -->
+      <div
+        id="gridView"
+        class="grid grid-cols-2 2xl:grid-cols-6 lg:grid-cols-5 gap-4 transition-all duration-500 ease-in-out transform"
+      >
+        <ProductCardGrid />
+      </div>
+
+      <!-- List View -->
+      <div
+        id="listView"
+        class="space-y-4 transition-all duration-500 ease-in-out transform opacity-0 scale-95 absolute top-0 left-0 w-full pointer-events-none"
+      >
+        <ProductCardList />
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<script>
+  // Get button and view elements
+  const gridViewBtn = document.getElementById("gridViewBtn");
+  const listViewBtn = document.getElementById("listViewBtn");
+  const gridView = document.getElementById("gridView");
+  const listView = document.getElementById("listView");
+
+  // Function to switch to grid view
+  function switchToGrid() {
+    // Animate out list view first
+    if (listView) {
+      listView.style.opacity = "0";
+      listView.style.transform = "scale(0.95) translateY(10px)";
+      listView.style.pointerEvents = "none";
+
+      // Position list view absolutely and show grid view
+      setTimeout(() => {
+        listView.classList.add("absolute", "top-0", "left-0", "w-full");
+        gridView?.classList.remove("absolute", "top-0", "left-0", "w-full");
+
+        // Animate in grid view
+        setTimeout(() => {
+          if (gridView) {
+            gridView.style.opacity = "1";
+            gridView.style.transform = "scale(1) translateY(0px)";
+            gridView.style.pointerEvents = "auto";
+          }
+        }, 50);
+      }, 100);
+    }
+
+    // Update button styles
+    gridViewBtn?.classList.remove("bg-gray-200", "text-gray-700");
+    gridViewBtn?.classList.add("bg-dark-green", "text-white");
+
+    listViewBtn?.classList.remove("bg-dark-green", "text-white");
+    listViewBtn?.classList.add("bg-gray-200", "text-gray-700");
+  }
+
+  // Function to switch to list view
+  function switchToList() {
+    // Animate out grid view first
+    if (gridView) {
+      gridView.style.opacity = "0";
+      gridView.style.transform = "scale(0.95) translateY(10px)";
+      gridView.style.pointerEvents = "none";
+
+      // Position grid view absolutely and show list view
+      setTimeout(() => {
+        gridView.classList.add("absolute", "top-0", "left-0", "w-full");
+        listView?.classList.remove("absolute", "top-0", "left-0", "w-full");
+
+        // Animate in list view
+        setTimeout(() => {
+          if (listView) {
+            listView.style.opacity = "1";
+            listView.style.transform = "scale(1) translateY(0px)";
+            listView.style.pointerEvents = "auto";
+          }
+        }, 50);
+      }, 100);
+    }
+
+    // Update button styles
+    listViewBtn?.classList.remove("bg-gray-200", "text-gray-700");
+    listViewBtn?.classList.add("bg-dark-green", "text-white");
+
+    gridViewBtn?.classList.remove("bg-dark-green", "text-white");
+    gridViewBtn?.classList.add("bg-gray-200", "text-gray-700");
+  }
+
+  // Add event listeners
+  gridViewBtn?.addEventListener("click", switchToGrid);
+  listViewBtn?.addEventListener("click", switchToList);
+
+  // Set default view (grid view is active by default)
+  if (gridView && listView) {
+    // Initialize grid view
+    gridView.style.opacity = "1";
+    gridView.style.transform = "scale(1) translateY(0px)";
+    gridView.style.pointerEvents = "auto";
+
+    // Initialize list view as hidden
+    listView.style.opacity = "0";
+    listView.style.transform = "scale(0.95) translateY(10px)";
+    listView.style.pointerEvents = "none";
+    listView.classList.add("absolute", "top-0", "left-0", "w-full");
+  }
+
+  // Set button styles
+  switchToGrid();
+</script>

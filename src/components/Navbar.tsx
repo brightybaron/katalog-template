@@ -12,7 +12,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(false);
-  const isHomePath = currentPath === "/";
+  const isAboutPage = currentPath === "/about";
 
   const prevPathRef = useRef(currentPath);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -144,10 +144,14 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
         aria-label="Navigation"
       >
         <div
-          className={`hidden md:relative md:flex justify-center items-center w-full bg-stone-300 font-semibold text-gray-600 transition-all duration-300 ease-in-out${
+          className={`hidden md:relative md:flex justify-center items-center w-full font-medium transition-all duration-300 ease-in-out${
             scrollPosition
               ? "-translate-y-[150%] opacity-0 py-0"
               : "translate-y-0 opacity-100 py-2"
+          } ${
+            isAboutPage
+              ? "bg-dark-green text-gray-400"
+              : "bg-stone-300 text-gray-600"
           }`}
         >
           <a
@@ -196,12 +200,12 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
                 {listMenu.map((item, index) => (
                   <div
                     key={index}
-                    className={`px-3 py-2 font-medium text-lg after:content-[''] after:block after:border-b-2 after:border-black after:transition-all after:duration-300 ${
+                    className={`px-3 py-2 font-medium text-lg after:content-[''] after:block after:border-b-2 after:border-black after:transition-all after:duration-300 hover:after:scale-x-50 ${
                       isActive(item.path)
-                        ? "after:scale-x-100"
-                        : "after:scale-x-0 after:origin-center"
+                        ? "after:scale-x-50 after:origin-center"
+                        : "after:scale-x-0 after:origin-center "
                     } ${
-                      !isHomePath
+                      isAboutPage
                         ? !scrollPosition
                           ? !isDropDownOpen
                             ? "text-white"
