@@ -12,6 +12,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(false);
+  const isHomePath = currentPath === "/";
 
   const prevPathRef = useRef(currentPath);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -200,7 +201,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
                         ? "after:scale-x-100"
                         : "after:scale-x-0 after:origin-center"
                     } ${
-                      currentPath === "/about"
+                      !isHomePath
                         ? !scrollPosition
                           ? !isDropDownOpen
                             ? "text-white"
