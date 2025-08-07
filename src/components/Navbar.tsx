@@ -12,7 +12,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(false);
-  const isAboutPage = currentPath === "/about";
+  const aboutPage = currentPath === "/about";
 
   const prevPathRef = useRef(currentPath);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -144,12 +144,12 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
         aria-label="Navigation"
       >
         <div
-          className={`hidden md:relative md:flex justify-center items-center w-full font-medium transition-all duration-300 ease-in-out${
+          className={`hidden md:relative md:flex justify-center items-center w-full font-medium transition-all duration-300 ease-in-out ${
             scrollPosition
               ? "-translate-y-[150%] opacity-0 py-0"
               : "translate-y-0 opacity-100 py-2"
           } ${
-            isAboutPage
+            aboutPage
               ? "bg-dark-green text-gray-400"
               : "bg-stone-300 text-gray-600"
           }`}
@@ -205,7 +205,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
                         ? "after:scale-x-50 after:origin-center"
                         : "after:scale-x-0 after:origin-center "
                     } ${
-                      isAboutPage
+                      aboutPage
                         ? !scrollPosition
                           ? !isDropDownOpen
                             ? "text-white"
