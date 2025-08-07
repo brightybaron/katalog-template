@@ -17,10 +17,8 @@ const currentPath = Astro.url.pathname;
     <title>{pageTitle} | Future Furniture</title>
   </head>
   <body class="bg-sand-gray">
-    <Navbar currentPath={currentPath} client:load />
-    <div
-      class:list={["w-full", currentPath === "/about" ? "h-0" : "h-22 md:h-32"]}
-    >
+    <Navbar currentPath={Astro.url.pathname} client:load />
+    <div class={`w-full ${currentPath === "/about" ? "h-0" : "h-22 md:h-32"}`}>
     </div>
     <slot />
     <Footer />
