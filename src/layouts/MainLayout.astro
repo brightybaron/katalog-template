@@ -5,7 +5,7 @@ import "@styles/global.css";
 
 const { pageTitle } = Astro.props;
 const currentPath = Astro.url.pathname;
-const aboutPage = currentPath === "/about";
+const aboutPage = currentPath === "/about" ? true : false;
 ---
 
 <html lang="en">
@@ -19,7 +19,9 @@ const aboutPage = currentPath === "/about";
   <body class="bg-sand-gray">
     <Navbar currentPath={currentPath} client:load />
     <div class={aboutPage ? "mt-0" : "mt-22 md:mt-32"}></div>
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>
