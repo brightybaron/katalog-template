@@ -12,7 +12,6 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(false);
-  const aboutPage = currentPath === "/about" ? true : false;
 
   const prevPathRef = useRef(currentPath);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -114,12 +113,12 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
     setIsMobileDropdownOpen(!isMobileDropdownOpen);
   };
 
-  const handleScroll = () => {
-    const position = window.scrollY;
-    setScrollPosition(position > 80);
-  };
-
   useEffect(() => {
+    const handleScroll = () => {
+      const position = window.scrollY;
+      setScrollPosition(position > 80);
+    };
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -135,13 +134,6 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
     };
   }, []);
 
-  const isAboutPage = aboutPage
-    ? "bg-dark-green text-gray-400"
-    : "bg-stone-300 text-gray-600";
-  const isScroll = scrollPosition
-    ? "-translate-y-[150%] opacity-0 py-0"
-    : "translate-y-0 opacity-100 py-2";
-
   return (
     <>
       <nav
@@ -151,7 +143,15 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
         aria-label="Navigation"
       >
         <div
-          className={`hidden md:relative md:flex justify-center items-center w-full font-medium transition-all duration-300 ease-in-out ${isAboutPage} ${isScroll}`}
+          className={`hidden md:relative md:flex justify-center items-center w-full font-medium transition-all duration-300 ease-in-out ${
+            currentPath === "/about"
+              ? "bg-dark-green text-gray-400"
+              : "bg-stone-300 text-gray-600"
+          } ${
+            scrollPosition
+              ? "-translate-y-[150%] opacity-0 py-0"
+              : "translate-y-0 opacity-100 py-2"
+          }`}
         >
           <a
             href="#"
@@ -171,7 +171,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
         </div>
         <div className="relative w-full mx-auto">
           <div
-            className={`flex justify-between items-center min-h-16 transition-all duration-200 ease-in-out px-2 ${
+            className={`flex justify-between items-center min-h-16 transition-all duration-300 ease-in-out px-2 ${
               scrollPosition
                 ? "md:bg-white md:rounded-t-full md:rounded-b-full md:py-2 md:px-2"
                 : "md:py-2 md:px-12"
@@ -199,8 +199,8 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
                 {listMenu.map((item, index) => (
                   <div
                     key={index}
-                    className={`px-3 py-2 font-medium text-lg after:content-[''] after:block after:border-b-2 after:border-black after:transition-all after:duration-300 hover:after:scale-x-50 ${
-                      aboutPage
+                    className={`px-3 py-2 font-medium text-lg after:content-[''] after:block after:border-b-2 after:border-black after:transition-all after:duration-500 hover:after:scale-x-50 ${
+                      currentPath === "/about"
                         ? !scrollPosition
                           ? !isDropDownOpen
                             ? "text-white"
@@ -223,7 +223,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
                         <div className="inline-flex items-center gap-x-1 transition-all duration-300 transform hover:cursor-pointer">
                           {item.page}
                           <div
-                            className={`transition-transform duration-300 ${
+                            className={`transition-transform duration-500 ${
                               isDropDownOpen ? "rotate-180" : "rotate-0"
                             }`}
                           >
@@ -269,7 +269,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
               ref={dropdownRef}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
-              className={`relative top-0 bg-white transition-all duration-300 ease-in-out transform overflow-hidden py-4 rounded-b-xl hidden md:block ${
+              className={`relative top-0 bg-white transition-all duration-500 ease-in-out transform overflow-hidden py-4 rounded-b-xl hidden md:block ${
                 isDropDownOpen
                   ? `translate-y-0 opacity-100 h-auto w-full ${
                       scrollPosition ? "px-2" : "px-12"
