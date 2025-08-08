@@ -12,6 +12,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(false);
+  const aboutPage = currentPath === "/about/";
 
   const prevPathRef = useRef(currentPath);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -144,7 +145,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
       >
         <div
           className={`hidden md:relative md:flex justify-center items-center w-full font-medium transition-all duration-300 ease-in-out ${
-            currentPath === "/about"
+            aboutPage
               ? "bg-dark-green text-gray-400"
               : "bg-stone-300 text-gray-600"
           } ${
@@ -200,7 +201,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
                   <div
                     key={index}
                     className={`px-3 py-2 font-medium text-lg after:content-[''] after:block after:border-b-2 after:border-black after:transition-all after:duration-500 hover:after:scale-x-50 ${
-                      currentPath === "/about"
+                      aboutPage
                         ? !scrollPosition
                           ? !isDropDownOpen
                             ? "text-white"
