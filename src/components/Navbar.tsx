@@ -135,6 +135,13 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
     };
   }, []);
 
+  const isAboutPage = aboutPage
+    ? "bg-dark-green text-gray-400"
+    : "bg-stone-300 text-gray-600";
+  const isScroll = scrollPosition
+    ? "-translate-y-[150%] opacity-0 py-0"
+    : "translate-y-0 opacity-100 py-2";
+
   return (
     <>
       <nav
@@ -144,15 +151,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
         aria-label="Navigation"
       >
         <div
-          className={`hidden md:relative md:flex justify-center items-center w-full font-medium transition-all duration-300 ease-in-out ${
-            aboutPage
-              ? "bg-dark-green text-gray-400"
-              : "bg-stone-300 text-gray-600"
-          } ${
-            scrollPosition
-              ? "-translate-y-[150%] opacity-0 py-0"
-              : "translate-y-0 opacity-100 py-2"
-          }`}
+          className={`hidden md:relative md:flex justify-center items-center w-full font-medium transition-all duration-300 ease-in-out ${isAboutPage} ${isScroll}`}
         >
           <a
             href="#"
