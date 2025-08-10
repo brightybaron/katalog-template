@@ -1,0 +1,110 @@
+---
+import "@styles/global.css";
+
+export interface Props {
+  slug: string;
+}
+
+export async function getStaticPaths() {
+  return [{ params: { slug: "404" } }];
+}
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/dummy-logo.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Page Not Found | Future Furniture</title>
+  </head>
+  <body>
+    <div class="h-screen w-full relative overflow-hidden">
+      <!-- Background Image dengan Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="/images/hero.webp"
+          alt="404 Background"
+          class="w-full h-full object-cover object-center"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/10"
+        >
+        </div>
+      </div>
+
+      <!-- Content Container -->
+      <div
+        class="relative z-10 h-full w-full flex items-center justify-center px-4"
+      >
+        <div
+          class="bg-white/85 backdrop-blur-sm rounded-xl shadow-2xl p-8 max-w-md w-full text-center transition-all duration-300 hover:shadow-xl animate-fadeIn"
+        >
+          <!-- Logo -->
+          <img
+            src="/dummy-logo.png"
+            alt="404 Logo"
+            class="w-24 h-auto mx-auto mb-4 grayscale"
+          />
+
+          <!-- Error Code -->
+          <h2
+            class="text-7xl font-bold bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent mb-2"
+          >
+            404
+          </h2>
+
+          <!-- Emoji that changes -->
+          <div id="emoji" class="text-5xl mb-3 animate-bounce">🧐</div>
+
+          <!-- Error Message -->
+          <h1 class="text-2xl font-bold text-gray-800 mb-3">Page not found</h1>
+
+          <p class="text-gray-600 mb-6">
+            Wow, it looks like you're lost in our website adventure. The page
+            you're looking for doesn't exist or has moved.
+          </p>
+
+          <!-- Back Button -->
+          <a
+            href="/"
+            class="inline-block bg-gradient-to-r from-indigo-600 to-blue-500 text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:shadow-blue-500/50 transform transition-all duration-300 hover:-translate-y-1"
+          >
+            Back to homepage
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Animated emoji
+      document.addEventListener("DOMContentLoaded", () => {
+        const emojis = ["🧐", "😅", "🤔", "🙃"];
+        const emojiElement = document.getElementById("emoji") as HTMLElement;
+        let currentIndex = 0;
+
+        setInterval(() => {
+          currentIndex = (currentIndex + 1) % emojis.length;
+          emojiElement.textContent = emojis[currentIndex];
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+</style>
