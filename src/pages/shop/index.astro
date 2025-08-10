@@ -2,6 +2,17 @@
 import ProductCardGrid from "@components/ProductCardGrid.astro";
 import ProductCardList from "@components/ProductCardList.astro";
 import MainLayout from "@layouts/MainLayout.astro";
+import { getCollection } from "astro:content";
+
+const products = await getCollection("product");
+const productData = (entry: any) => ({
+  title: entry.data.title,
+  slug: entry.slug,
+  description: entry.data.description,
+  image: entry.data.image[0].src,
+  price: entry.data.price,
+  category: entry.data.category,
+});
 ---
 
 <MainLayout pageTitle="Shop">
@@ -13,7 +24,7 @@ import MainLayout from "@layouts/MainLayout.astro";
       <div class="flex border border-gray-300 rounded-lg overflow-hidden">
         <button
           id="gridViewBtn"
-          class="px-4 py-2 bg-dark-green text-white hover:bg-gray-600 transition-all duration-300 flex items-center gap-2"
+          class="px-3 py-2 bg-dark-green text-white hover:bg-gray-600 transition-all duration-300 flex items-center gap-2 hover:cursor-pointer"
         >
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
             <path
@@ -25,7 +36,7 @@ import MainLayout from "@layouts/MainLayout.astro";
         </button>
         <button
           id="listViewBtn"
-          class="px-4 py-2 bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all duration-300 flex items-center gap-2"
+          class="px-3 py-2 bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all duration-300 flex items-center gap-2 hover:cursor-pointer"
         >
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
             <path
@@ -47,15 +58,25 @@ import MainLayout from "@layouts/MainLayout.astro";
         id="gridView"
         class="grid grid-cols-2 2xl:grid-cols-6 lg:grid-cols-5 gap-4 transition-all duration-500 ease-in-out transform"
       >
-        <ProductCardGrid />
+        {
+          products.map((entry: any) => (
+            <ProductCardGrid {...productData(entry)} />
+          ))
+        }
+        <!-- <ProductCardGrid /> -->
       </div>
 
       <!-- List View -->
       <div
         id="listView"
-        class="space-y-4 transition-all duration-500 ease-in-out transform opacity-0 scale-95 absolute top-0 left-0 w-full pointer-events-none"
+        class="grid grid-cols-1 2xl:grid-cols-2 gap-4 transition-all duration-500 ease-in-out transform opacity-0 absolute top-0 left-0 w-full pointer-events-none"
       >
-        <ProductCardList />
+        {
+          products.map((entry: any) => (
+            <ProductCardList {...productData(entry)} />
+          ))
+        }
+        <!-- <ProductCardList /> -->
       </div>
     </div>
   </section>

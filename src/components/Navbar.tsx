@@ -12,7 +12,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(false);
-  const aboutPage = currentPath === "/about/";
+  const aboutPage = currentPath.includes("/about");
 
   const prevPathRef = useRef(currentPath);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -52,9 +52,9 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
   const isActive = (path: string) => {
     if (path === "/" && currentPath === "/") return true;
     if (path !== "/" && currentPath.startsWith(path)) {
-      if (path === "/shop" && currentPath !== "/shop") {
+      if (path === "/shop/" && currentPath !== "/shop/") {
         const dropdownItem = listMenu
-          .find((item) => item.path === "/shop")
+          .find((item) => item.path === "/shop/")
           ?.dropdownItems?.find((item) => item.path === currentPath);
         return !dropdownItem;
       }
@@ -138,13 +138,13 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 bg-white md:bg-transparent transition-all ease-linear duration-300 mt-2 md:mt-0 w-[95%] rounded-full md:rounded-none ${
-          scrollPosition ? "md:w-[90%]" : "md:w-full"
+        className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 bg-white lg:bg-transparent transition-all ease-linear duration-300 mt-2 lg:mt-0 w-[95%] rounded-full lg:rounded-none ${
+          scrollPosition ? "lg:w-[90%]" : "lg:w-full"
         } `}
         aria-label="Navigation"
       >
         <div
-          className={`hidden md:relative md:flex justify-center items-center w-full font-medium transition-all duration-300 ease-in-out ${
+          className={`hidden lg:relative lg:flex justify-center items-center w-full font-medium transition-all duration-300 ease-in-out ${
             aboutPage
               ? "bg-dark-green text-gray-400"
               : "bg-stone-300 text-gray-600"
@@ -174,13 +174,13 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
           <div
             className={`flex justify-between items-center min-h-16 transition-all duration-300 ease-in-out px-2 ${
               scrollPosition
-                ? "md:bg-white md:rounded-t-full md:rounded-b-full md:py-2 md:px-2"
-                : "md:py-2 md:px-12"
+                ? "lg:bg-white lg:rounded-t-full lg:rounded-b-full lg:py-2 lg:px-2"
+                : "lg:py-2 lg:px-12"
             } ${
               isDropDownOpen
                 ? scrollPosition
-                  ? "md:rounded-t-xl md:rounded-b-none"
-                  : "md:bg-white"
+                  ? "lg:rounded-t-xl lg:rounded-b-none"
+                  : "lg:bg-white"
                 : ""
             }`}
           >
@@ -191,12 +191,12 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
                 <img
                   src="/dummy-logo.png"
                   alt="Logo"
-                  className="w-12 h-12 md:h-16 md:w-16"
+                  className="w-12 h-12 lg:h-16 lg:w-16"
                 />
               </a>
 
               {/* Menu */}
-              <div className="hidden md:flex ml-12 items-center space-x-4">
+              <div className="hidden lg:flex ml-12 items-center space-x-4">
                 {listMenu.map((item, index) => (
                   <div
                     key={index}
@@ -257,7 +257,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
               <button
                 id="mobile-menu-button"
                 onClick={handleMobileMenuClick}
-                className="md:hidden p-2 z-50 relative ring-1 ring-stone-400 rounded-full"
+                className="lg:hidden p-2 z-50 relative ring-1 ring-stone-400 rounded-full"
               >
                 {isMenuOpen ? <IconCross /> : <IconHamburger />}
               </button>
@@ -270,7 +270,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
               ref={dropdownRef}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
-              className={`relative top-0 bg-white transition-all duration-500 ease-in-out transform overflow-hidden py-4 rounded-b-xl hidden md:block ${
+              className={`relative top-0 bg-white transition-all duration-500 ease-in-out transform overflow-hidden py-4 rounded-b-xl hidden lg:block ${
                 isDropDownOpen
                   ? `translate-y-0 opacity-100 h-auto w-full ${
                       scrollPosition ? "px-2" : "px-12"
@@ -315,7 +315,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
       <div
         id="mobile-menu"
         ref={mobileMenuRef}
-        className={`md:hidden fixed inset-0 bg-white z-40 flex flex-col transition-transform duration-500 ease-linear ${
+        className={`lg:hidden fixed inset-0 bg-white z-40 flex flex-col transition-transform duration-500 ease-linear ${
           isMenuOpen
             ? "translate-y-0"
             : "-translate-y-[100%] pointer-events-none"

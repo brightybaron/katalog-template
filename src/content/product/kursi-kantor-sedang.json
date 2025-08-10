@@ -1,0 +1,12 @@
+{
+  "title": "Kursi Kantor Sedang",
+  "slug": "kursi-kantor-sedang",
+  "description": "lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, qui? Quasi aliquid aliquam sit",
+  "image": [
+    { "src": "/images/sofa-2.jpg" },
+    { "src": "/images/sofa-1.jpg" },
+    { "src": "/images/sofa-3.jpg" }
+  ],
+  "price": 500000,
+  "category": "chairs"
+}
