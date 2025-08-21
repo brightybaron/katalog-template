@@ -1,0 +1,1202 @@
+[
+  {
+    "title": "Produk 1",
+    "slug": "produk-1",
+    "description": "Hic nostrum atque nihil facilis autem ullam cumque. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/sofa-2.jpg"
+      },
+      {
+        "src": "/images/sofa-2.jpg"
+      }
+    ],
+    "price": 2007373,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 2",
+    "slug": "produk-2",
+    "description": "Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/kursi-2.jpg"
+      },
+      {
+        "src": "/images/kursi-1.jpg"
+      }
+    ],
+    "price": 990327,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 3",
+    "slug": "produk-3",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequatur iusto eveniet perspiciatis debitis incidunt.",
+    "image": [
+      {
+        "src": "/images/kursi-2.jpg"
+      },
+      {
+        "src": "/images/sofa-1.jpg"
+      }
+    ],
+    "price": 4691966,
+    "category": "cabinet"
+  },
+  {
+    "title": "Produk 4",
+    "slug": "produk-4",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/sofa-1.jpg"
+      },
+      {
+        "src": "/images/sofa-2.jpg"
+      }
+    ],
+    "price": 3184135,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 5",
+    "slug": "produk-5",
+    "description": "Hic nostrum atque nihil facilis autem ullam cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/sofa-2.jpg"
+      }
+    ],
+    "price": 3153131,
+    "category": "cabinet"
+  },
+  {
+    "title": "Produk 6",
+    "slug": "produk-6",
+    "description": "Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/sofa-2.jpg"
+      }
+    ],
+    "price": 1612712,
+    "category": "couch"
+  },
+  {
+    "title": "Produk 7",
+    "slug": "produk-7",
+    "description": "Vero consequatur iusto eveniet perspiciatis debitis incidunt. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum.",
+    "image": [
+      {
+        "src": "/images/kursi-2.jpg"
+      },
+      {
+        "src": "/images/sofa-3.jpg"
+      }
+    ],
+    "price": 2517598,
+    "category": "cabinet"
+  },
+  {
+    "title": "Produk 8",
+    "slug": "produk-8",
+    "description": "Hic nostrum atque nihil facilis autem ullam cumque. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/kursi-2.jpg"
+      },
+      {
+        "src": "/images/sofa-2.jpg"
+      }
+    ],
+    "price": 3478562,
+    "category": "table"
+  },
+  {
+    "title": "Produk 9",
+    "slug": "produk-9",
+    "description": "Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis. Vero consequatur iusto eveniet perspiciatis debitis incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/kursi-2.jpg"
+      }
+    ],
+    "price": 4612232,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 10",
+    "slug": "produk-10",
+    "description": "Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/kursi-2.jpg"
+      }
+    ],
+    "price": 3109657,
+    "category": "cabinet"
+  },
+  {
+    "title": "Produk 11",
+    "slug": "produk-11",
+    "description": "Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Vero consequatur iusto eveniet perspiciatis debitis incidunt.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/sofa-1.jpg"
+      }
+    ],
+    "price": 772750,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 12",
+    "slug": "produk-12",
+    "description": "Hic nostrum atque nihil facilis autem ullam cumque. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Vero consequatur iusto eveniet perspiciatis debitis incidunt.",
+    "image": [
+      {
+        "src": "/images/sofa-1.jpg"
+      },
+      {
+        "src": "/images/sofa-2.jpg"
+      }
+    ],
+    "price": 4711553,
+    "category": "cabinet"
+  },
+  {
+    "title": "Produk 13",
+    "slug": "produk-13",
+    "description": "Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nostrum atque nihil facilis autem ullam cumque.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/kursi-2.jpg"
+      }
+    ],
+    "price": 2424864,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 14",
+    "slug": "produk-14",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Vero consequatur iusto eveniet perspiciatis debitis incidunt.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/sofa-2.jpg"
+      }
+    ],
+    "price": 1734232,
+    "category": "table"
+  },
+  {
+    "title": "Produk 15",
+    "slug": "produk-15",
+    "description": "Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Hic nostrum atque nihil facilis autem ullam cumque.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/sofa-2.jpg"
+      }
+    ],
+    "price": 1415595,
+    "category": "couch"
+  },
+  {
+    "title": "Produk 16",
+    "slug": "produk-16",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Hic nostrum atque nihil facilis autem ullam cumque.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/sofa-2.jpg"
+      }
+    ],
+    "price": 3679143,
+    "category": "couch"
+  },
+  {
+    "title": "Produk 17",
+    "slug": "produk-17",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum.",
+    "image": [
+      {
+        "src": "/images/sofa-2.jpg"
+      },
+      {
+        "src": "/images/sofa-1.jpg"
+      }
+    ],
+    "price": 3754587,
+    "category": "cabinet"
+  },
+  {
+    "title": "Produk 18",
+    "slug": "produk-18",
+    "description": "Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis. Vero consequatur iusto eveniet perspiciatis debitis incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/kursi-1.jpg"
+      }
+    ],
+    "price": 4545502,
+    "category": "cabinet"
+  },
+  {
+    "title": "Produk 19",
+    "slug": "produk-19",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/kursi-2.jpg"
+      }
+    ],
+    "price": 2520999,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 20",
+    "slug": "produk-20",
+    "description": "Vero consequatur iusto eveniet perspiciatis debitis incidunt. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis. Hic nostrum atque nihil facilis autem ullam cumque.",
+    "image": [
+      {
+        "src": "/images/sofa-2.jpg"
+      },
+      {
+        "src": "/images/kursi-2.jpg"
+      }
+    ],
+    "price": 4937957,
+    "category": "shelf"
+  },
+  {
+    "title": "Produk 21",
+    "slug": "produk-21",
+    "description": "Vero consequatur iusto eveniet perspiciatis debitis incidunt. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/sofa-1.jpg"
+      }
+    ],
+    "price": 3432400,
+    "category": "couch"
+  },
+  {
+    "title": "Produk 22",
+    "slug": "produk-22",
+    "description": "Vero consequatur iusto eveniet perspiciatis debitis incidunt. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/sofa-1.jpg"
+      }
+    ],
+    "price": 2039779,
+    "category": "couch"
+  },
+  {
+    "title": "Produk 23",
+    "slug": "produk-23",
+    "description": "Vero consequatur iusto eveniet perspiciatis debitis incidunt. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/sofa-2.jpg"
+      }
+    ],
+    "price": 1705511,
+    "category": "cabinet"
+  },
+  {
+    "title": "Produk 24",
+    "slug": "produk-24",
+    "description": "Vero consequatur iusto eveniet perspiciatis debitis incidunt. Hic nostrum atque nihil facilis autem ullam cumque.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/sofa-2.jpg"
+      }
+    ],
+    "price": 2623417,
+    "category": "cabinet"
+  },
+  {
+    "title": "Produk 25",
+    "slug": "produk-25",
+    "description": "Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/sofa-1.jpg"
+      }
+    ],
+    "price": 4210515,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 26",
+    "slug": "produk-26",
+    "description": "Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/sofa-2.jpg"
+      }
+    ],
+    "price": 2679818,
+    "category": "shelf"
+  },
+  {
+    "title": "Produk 27",
+    "slug": "produk-27",
+    "description": "Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Vero consequatur iusto eveniet perspiciatis debitis incidunt.",
+    "image": [
+      {
+        "src": "/images/sofa-1.jpg"
+      },
+      {
+        "src": "/images/sofa-1.jpg"
+      }
+    ],
+    "price": 1454629,
+    "category": "cabinet"
+  },
+  {
+    "title": "Produk 28",
+    "slug": "produk-28",
+    "description": "Hic nostrum atque nihil facilis autem ullam cumque. Vero consequatur iusto eveniet perspiciatis debitis incidunt.",
+    "image": [
+      {
+        "src": "/images/sofa-1.jpg"
+      },
+      {
+        "src": "/images/kursi-2.jpg"
+      }
+    ],
+    "price": 686595,
+    "category": "cabinet"
+  },
+  {
+    "title": "Produk 29",
+    "slug": "produk-29",
+    "description": "Vero consequatur iusto eveniet perspiciatis debitis incidunt. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/sofa-1.jpg"
+      }
+    ],
+    "price": 1215395,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 30",
+    "slug": "produk-30",
+    "description": "Hic nostrum atque nihil facilis autem ullam cumque. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/sofa-1.jpg"
+      },
+      {
+        "src": "/images/sofa-2.jpg"
+      }
+    ],
+    "price": 3751323,
+    "category": "table"
+  },
+  {
+    "title": "Produk 31",
+    "slug": "produk-31",
+    "description": "Vero consequatur iusto eveniet perspiciatis debitis incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum.",
+    "image": [
+      {
+        "src": "/images/kursi-2.jpg"
+      },
+      {
+        "src": "/images/sofa-2.jpg"
+      }
+    ],
+    "price": 1292328,
+    "category": "table"
+  },
+  {
+    "title": "Produk 32",
+    "slug": "produk-32",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Hic nostrum atque nihil facilis autem ullam cumque.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/kursi-1.jpg"
+      }
+    ],
+    "price": 1948043,
+    "category": "shelf"
+  },
+  {
+    "title": "Produk 33",
+    "slug": "produk-33",
+    "description": "Hic nostrum atque nihil facilis autem ullam cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/sofa-2.jpg"
+      }
+    ],
+    "price": 3277226,
+    "category": "shelf"
+  },
+  {
+    "title": "Produk 34",
+    "slug": "produk-34",
+    "description": "Hic nostrum atque nihil facilis autem ullam cumque. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Vero consequatur iusto eveniet perspiciatis debitis incidunt.",
+    "image": [
+      {
+        "src": "/images/kursi-2.jpg"
+      },
+      {
+        "src": "/images/sofa-1.jpg"
+      }
+    ],
+    "price": 1955710,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 35",
+    "slug": "produk-35",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequatur iusto eveniet perspiciatis debitis incidunt.",
+    "image": [
+      {
+        "src": "/images/kursi-2.jpg"
+      },
+      {
+        "src": "/images/sofa-3.jpg"
+      }
+    ],
+    "price": 4255951,
+    "category": "table"
+  },
+  {
+    "title": "Produk 36",
+    "slug": "produk-36",
+    "description": "Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Vero consequatur iusto eveniet perspiciatis debitis incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/sofa-3.jpg"
+      }
+    ],
+    "price": 872742,
+    "category": "table"
+  },
+  {
+    "title": "Produk 37",
+    "slug": "produk-37",
+    "description": "Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Vero consequatur iusto eveniet perspiciatis debitis incidunt. Hic nostrum atque nihil facilis autem ullam cumque.",
+    "image": [
+      {
+        "src": "/images/kursi-2.jpg"
+      },
+      {
+        "src": "/images/sofa-3.jpg"
+      }
+    ],
+    "price": 3246958,
+    "category": "cabinet"
+  },
+  {
+    "title": "Produk 38",
+    "slug": "produk-38",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequatur iusto eveniet perspiciatis debitis incidunt.",
+    "image": [
+      {
+        "src": "/images/kursi-2.jpg"
+      },
+      {
+        "src": "/images/sofa-3.jpg"
+      }
+    ],
+    "price": 345119,
+    "category": "couch"
+  },
+  {
+    "title": "Produk 39",
+    "slug": "produk-39",
+    "description": "Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Hic nostrum atque nihil facilis autem ullam cumque.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/sofa-2.jpg"
+      }
+    ],
+    "price": 1994915,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 40",
+    "slug": "produk-40",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequatur iusto eveniet perspiciatis debitis incidunt. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/sofa-1.jpg"
+      }
+    ],
+    "price": 1303792,
+    "category": "cabinet"
+  },
+  {
+    "title": "Produk 41",
+    "slug": "produk-41",
+    "description": "Hic nostrum atque nihil facilis autem ullam cumque. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum.",
+    "image": [
+      {
+        "src": "/images/kursi-2.jpg"
+      },
+      {
+        "src": "/images/kursi-2.jpg"
+      }
+    ],
+    "price": 319736,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 42",
+    "slug": "produk-42",
+    "description": "Vero consequatur iusto eveniet perspiciatis debitis incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum.",
+    "image": [
+      {
+        "src": "/images/kursi-2.jpg"
+      },
+      {
+        "src": "/images/sofa-1.jpg"
+      }
+    ],
+    "price": 2661619,
+    "category": "shelf"
+  },
+  {
+    "title": "Produk 43",
+    "slug": "produk-43",
+    "description": "Vero consequatur iusto eveniet perspiciatis debitis incidunt. Hic nostrum atque nihil facilis autem ullam cumque.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/sofa-1.jpg"
+      }
+    ],
+    "price": 3542874,
+    "category": "table"
+  },
+  {
+    "title": "Produk 44",
+    "slug": "produk-44",
+    "description": "Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Hic nostrum atque nihil facilis autem ullam cumque.",
+    "image": [
+      {
+        "src": "/images/sofa-2.jpg"
+      },
+      {
+        "src": "/images/kursi-2.jpg"
+      }
+    ],
+    "price": 3750125,
+    "category": "shelf"
+  },
+  {
+    "title": "Produk 45",
+    "slug": "produk-45",
+    "description": "Vero consequatur iusto eveniet perspiciatis debitis incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nostrum atque nihil facilis autem ullam cumque.",
+    "image": [
+      {
+        "src": "/images/sofa-1.jpg"
+      },
+      {
+        "src": "/images/sofa-3.jpg"
+      }
+    ],
+    "price": 422231,
+    "category": "couch"
+  },
+  {
+    "title": "Produk 46",
+    "slug": "produk-46",
+    "description": "Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Hic nostrum atque nihil facilis autem ullam cumque. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/sofa-1.jpg"
+      }
+    ],
+    "price": 3065338,
+    "category": "couch"
+  },
+  {
+    "title": "Produk 47",
+    "slug": "produk-47",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/sofa-3.jpg"
+      }
+    ],
+    "price": 641538,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 48",
+    "slug": "produk-48",
+    "description": "Vero consequatur iusto eveniet perspiciatis debitis incidunt. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/kursi-1.jpg"
+      }
+    ],
+    "price": 3003883,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 49",
+    "slug": "produk-49",
+    "description": "Vero consequatur iusto eveniet perspiciatis debitis incidunt. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/kursi-2.jpg"
+      }
+    ],
+    "price": 1365046,
+    "category": "table"
+  },
+  {
+    "title": "Produk 50",
+    "slug": "produk-50",
+    "description": "Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/kursi-1.jpg"
+      }
+    ],
+    "price": 1883243,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 51",
+    "slug": "produk-51",
+    "description": "Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Vero consequatur iusto eveniet perspiciatis debitis incidunt. Hic nostrum atque nihil facilis autem ullam cumque.",
+    "image": [
+      {
+        "src": "/images/sofa-1.jpg"
+      },
+      {
+        "src": "/images/kursi-1.jpg"
+      }
+    ],
+    "price": 4579650,
+    "category": "cabinet"
+  },
+  {
+    "title": "Produk 52",
+    "slug": "produk-52",
+    "description": "Vero consequatur iusto eveniet perspiciatis debitis incidunt. Hic nostrum atque nihil facilis autem ullam cumque.",
+    "image": [
+      {
+        "src": "/images/sofa-2.jpg"
+      },
+      {
+        "src": "/images/kursi-2.jpg"
+      }
+    ],
+    "price": 3550716,
+    "category": "shelf"
+  },
+  {
+    "title": "Produk 53",
+    "slug": "produk-53",
+    "description": "Hic nostrum atque nihil facilis autem ullam cumque. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/sofa-1.jpg"
+      }
+    ],
+    "price": 3439124,
+    "category": "couch"
+  },
+  {
+    "title": "Produk 54",
+    "slug": "produk-54",
+    "description": "Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis. Hic nostrum atque nihil facilis autem ullam cumque.",
+    "image": [
+      {
+        "src": "/images/kursi-2.jpg"
+      },
+      {
+        "src": "/images/sofa-1.jpg"
+      }
+    ],
+    "price": 3836252,
+    "category": "shelf"
+  },
+  {
+    "title": "Produk 55",
+    "slug": "produk-55",
+    "description": "Vero consequatur iusto eveniet perspiciatis debitis incidunt. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/sofa-3.jpg"
+      }
+    ],
+    "price": 439882,
+    "category": "shelf"
+  },
+  {
+    "title": "Produk 56",
+    "slug": "produk-56",
+    "description": "Hic nostrum atque nihil facilis autem ullam cumque. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum.",
+    "image": [
+      {
+        "src": "/images/sofa-1.jpg"
+      },
+      {
+        "src": "/images/kursi-1.jpg"
+      }
+    ],
+    "price": 3511312,
+    "category": "couch"
+  },
+  {
+    "title": "Produk 57",
+    "slug": "produk-57",
+    "description": "Hic nostrum atque nihil facilis autem ullam cumque. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/sofa-3.jpg"
+      }
+    ],
+    "price": 4681193,
+    "category": "couch"
+  },
+  {
+    "title": "Produk 58",
+    "slug": "produk-58",
+    "description": "Vero consequatur iusto eveniet perspiciatis debitis incidunt. Hic nostrum atque nihil facilis autem ullam cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/sofa-2.jpg"
+      }
+    ],
+    "price": 1270290,
+    "category": "table"
+  },
+  {
+    "title": "Produk 59",
+    "slug": "produk-59",
+    "description": "Vero consequatur iusto eveniet perspiciatis debitis incidunt. Hic nostrum atque nihil facilis autem ullam cumque.",
+    "image": [
+      {
+        "src": "/images/kursi-2.jpg"
+      },
+      {
+        "src": "/images/kursi-1.jpg"
+      }
+    ],
+    "price": 602637,
+    "category": "cabinet"
+  },
+  {
+    "title": "Produk 60",
+    "slug": "produk-60",
+    "description": "Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": [
+      {
+        "src": "/images/sofa-2.jpg"
+      },
+      {
+        "src": "/images/sofa-1.jpg"
+      }
+    ],
+    "price": 3232571,
+    "category": "couch"
+  },
+  {
+    "title": "Produk 61",
+    "slug": "produk-61",
+    "description": "Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/sofa-2.jpg"
+      }
+    ],
+    "price": 289875,
+    "category": "shelf"
+  },
+  {
+    "title": "Produk 62",
+    "slug": "produk-62",
+    "description": "Hic nostrum atque nihil facilis autem ullam cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": [
+      {
+        "src": "/images/kursi-2.jpg"
+      },
+      {
+        "src": "/images/kursi-2.jpg"
+      }
+    ],
+    "price": 2849563,
+    "category": "table"
+  },
+  {
+    "title": "Produk 63",
+    "slug": "produk-63",
+    "description": "Vero consequatur iusto eveniet perspiciatis debitis incidunt. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/sofa-1.jpg"
+      },
+      {
+        "src": "/images/kursi-1.jpg"
+      }
+    ],
+    "price": 4213800,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 64",
+    "slug": "produk-64",
+    "description": "Hic nostrum atque nihil facilis autem ullam cumque. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum.",
+    "image": [
+      {
+        "src": "/images/sofa-2.jpg"
+      },
+      {
+        "src": "/images/kursi-1.jpg"
+      }
+    ],
+    "price": 491674,
+    "category": "table"
+  },
+  {
+    "title": "Produk 65",
+    "slug": "produk-65",
+    "description": "Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis. Hic nostrum atque nihil facilis autem ullam cumque.",
+    "image": [
+      {
+        "src": "/images/kursi-2.jpg"
+      },
+      {
+        "src": "/images/kursi-1.jpg"
+      }
+    ],
+    "price": 4948659,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 66",
+    "slug": "produk-66",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/kursi-2.jpg"
+      }
+    ],
+    "price": 4766039,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 67",
+    "slug": "produk-67",
+    "description": "Vero consequatur iusto eveniet perspiciatis debitis incidunt. Hic nostrum atque nihil facilis autem ullam cumque. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/sofa-1.jpg"
+      },
+      {
+        "src": "/images/sofa-3.jpg"
+      }
+    ],
+    "price": 3181443,
+    "category": "cabinet"
+  },
+  {
+    "title": "Produk 68",
+    "slug": "produk-68",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequatur iusto eveniet perspiciatis debitis incidunt. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis.",
+    "image": [
+      {
+        "src": "/images/sofa-1.jpg"
+      },
+      {
+        "src": "/images/sofa-1.jpg"
+      }
+    ],
+    "price": 394315,
+    "category": "shelf"
+  },
+  {
+    "title": "Produk 69",
+    "slug": "produk-69",
+    "description": "Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/kursi-2.jpg"
+      }
+    ],
+    "price": 4285480,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 70",
+    "slug": "produk-70",
+    "description": "Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/sofa-3.jpg"
+      }
+    ],
+    "price": 157367,
+    "category": "cabinet"
+  },
+  {
+    "title": "Produk 71",
+    "slug": "produk-71",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/kursi-2.jpg"
+      }
+    ],
+    "price": 4306863,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 72",
+    "slug": "produk-72",
+    "description": "Hic nostrum atque nihil facilis autem ullam cumque. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/sofa-3.jpg"
+      }
+    ],
+    "price": 3779650,
+    "category": "table"
+  },
+  {
+    "title": "Produk 73",
+    "slug": "produk-73",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/sofa-2.jpg"
+      }
+    ],
+    "price": 4397705,
+    "category": "cabinet"
+  },
+  {
+    "title": "Produk 74",
+    "slug": "produk-74",
+    "description": "Vero consequatur iusto eveniet perspiciatis debitis incidunt. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": [
+      {
+        "src": "/images/sofa-2.jpg"
+      },
+      {
+        "src": "/images/kursi-1.jpg"
+      }
+    ],
+    "price": 2128821,
+    "category": "chair"
+  },
+  {
+    "title": "Produk 75",
+    "slug": "produk-75",
+    "description": "Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/sofa-1.jpg"
+      }
+    ],
+    "price": 872974,
+    "category": "table"
+  },
+  {
+    "title": "Produk 76",
+    "slug": "produk-76",
+    "description": "Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis. Vero consequatur iusto eveniet perspiciatis debitis incidunt. Hic nostrum atque nihil facilis autem ullam cumque.",
+    "image": [
+      {
+        "src": "/images/kursi-1.jpg"
+      },
+      {
+        "src": "/images/kursi-2.jpg"
+      }
+    ],
+    "price": 702112,
+    "category": "cabinet"
+  },
+  {
+    "title": "Produk 77",
+    "slug": "produk-77",
+    "description": "Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum. Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis. Hic nostrum atque nihil facilis autem ullam cumque.",
+    "image": [
+      {
+        "src": "/images/sofa-1.jpg"
+      },
+      {
+        "src": "/images/sofa-3.jpg"
+      }
+    ],
+    "price": 1112467,
+    "category": "couch"
+  },
+  {
+    "title": "Produk 78",
+    "slug": "produk-78",
+    "description": "Hic nostrum atque nihil facilis autem ullam cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": [
+      {
+        "src": "/images/kursi-2.jpg"
+      },
+      {
+        "src": "/images/kursi-1.jpg"
+      }
+    ],
+    "price": 4473252,
+    "category": "cabinet"
+  },
+  {
+    "title": "Produk 79",
+    "slug": "produk-79",
+    "description": "Hic nostrum atque nihil facilis autem ullam cumque. Vero consequatur iusto eveniet perspiciatis debitis incidunt.",
+    "image": [
+      {
+        "src": "/images/sofa-3.jpg"
+      },
+      {
+        "src": "/images/kursi-2.jpg"
+      }
+    ],
+    "price": 2879592,
+    "category": "table"
+  },
+  {
+    "title": "Produk 80",
+    "slug": "produk-80",
+    "description": "Quisquam minima excepturi ad beatae voluptate adipisci reiciendis rerum blanditiis. Eius tempora nam totam deserunt earum illum ex numquam molestiae laborum.",
+    "image": [
+      {
+        "src": "/images/kursi-2.jpg"
+      },
+      {
+        "src": "/images/sofa-1.jpg"
+      }
+    ],
+    "price": 671865,
+    "category": "shelf"
+  }
+]

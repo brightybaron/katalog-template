@@ -1,0 +1,25 @@
+---
+import ProductDetail from "@components/ProductDetail.astro";
+import MainLayout from "@layouts/MainLayout.astro";
+
+export async function getStaticPaths() {
+  const entries = await fetch("http://localhost:4321/data/products.json");
+  const products = await entries.json();
+
+  return products.map((product: any) => ({
+    params: {
+      category: product.category,
+      slug: product.slug,
+    },
+    props: { product },
+  }));
+}
+
+const { product } = Astro.props;
+---
+
+<MainLayout pageTitle={product.title}>
+  <div class="px-4 md:px-8 lg:px-12 mt-8 min-h-[75vh]">
+    <ProductDetail product={product} />
+  </div>
+</MainLayout>

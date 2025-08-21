@@ -1,0 +1,173 @@
+---
+import Lightbox from "@components/Lightbox";
+
+const { product } = Astro.props;
+---
+
+<div class="grid sm:grid-cols-4 grid-cols-1 mt-4 gap-4">
+  <div class="col-span-1 mx-auto w-full grid gap-y-2 h-full">
+    <div class="overflow-hidden">
+      <Lightbox
+        client:load
+        images={product.image.slice(0, 1)}
+        title={product.title}
+      />
+    </div>
+    <div>
+      {
+        product.image.length >= 4 ? (
+          <div class="grid grid-flow-col auto-cols-[33.33%] gap-x-2 overflow-x-scroll custom-scrollbar">
+            <Lightbox
+              client:load
+              images={product.image}
+              title={product.title}
+            />
+          </div>
+        ) : (
+          <div class="grid grid-cols-3 gap-x-2 overflow-hidden">
+            <Lightbox
+              client:load
+              images={product.image}
+              title={product.title}
+            />
+          </div>
+        )
+      }
+    </div>
+  </div>
+  <div class="col-span-3 sm:mt-0 mt-4 h-full flex flex-col justify-between">
+    <div class="flex flex-col gap-4">
+      <p class="text-3xl font-semibold">{product.title}</p>
+      <p class="font-medium tracking-tight text-slate-600">
+        <span
+          class="text-stone-600 font-bold text-2xl inline-block leading-4 after:content-[''] after:block after:border-b-2 after:border-b-stone-400 w-fit"
+        >
+          Rp. {product.price.toLocaleString("id-ID")},-
+        </span>
+      </p>
+      <div>
+        <p class="font-bold tracking-tight text-slate-600">Deskripsi</p>
+        <div class="space-y-1 px-4">
+          <p class="list-item">
+            {product.description}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dropdown menu -->
+    <div class="relative inline-block">
+      <button
+        id="dropdownDefaultButton"
+        class="text-white bg-teal-700 hover:bg-teal-800 hover:cursor-pointer focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-4 py-2.5 text-center inline-flex items-center gap-x-1"
+        type="button"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="w-5 h-5"
+        >
+          <circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"
+          ></circle>
+          <path
+            d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+          >
+          </path>
+        </svg> Order
+      </button>
+
+      <!-- Dropdown menu -->
+      <div
+        id="dropdown"
+        class="z-10 hidden absolute bottom-full my-2 bg-gray-200 divide-y divide-gray-100 rounded-lg shadow w-44"
+      >
+        <ul
+          class="py-2 text-sm text-gray-700"
+          aria-labelledby="dropdownDefaultButton"
+        >
+          <li>
+            <a
+              href="https://shopee.co.id/"
+              target="_blank"
+              referrerpolicy="no-referrer"
+              class="block px-4 py-2 hover:bg-gray-600 hover:text-white"
+              >Shopee</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://tokopedia.com/"
+              target="_blank"
+              referrerpolicy="no-referrer"
+              class="block px-4 py-2 hover:bg-gray-600 hover:text-white"
+              >Tokopedia</a
+            >
+          </li>
+          <li>
+            <a
+              href={`https://wa.me/628212345678/?text=Hi%20Admin%20Moluska%20Saya%20mau%20tanya%20tentang%20${product.title} || ""}`}
+              class="block px-4 py-2 hover:bg-gray-600 hover:text-white"
+              >Chat Admin</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .custom-scrollbar {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #a0aec0 transparent; /* Color for Firefox */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    height: 10px; /* Scrollbar height */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent; /* Track background */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #a0aec0; /* Thumb color */
+    border-radius: 10px; /* Rounded corners */
+    border: none; /* Optional for no border */
+    height: 12px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #718096; /* Thumb color on hover */
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const dropdownButton = document.getElementById(
+      "dropdownDefaultButton"
+    ) as HTMLElement;
+    const dropdownMenu = document.getElementById("dropdown") as HTMLElement;
+
+    dropdownButton.addEventListener("click", () => {
+      dropdownMenu.classList.toggle("hidden");
+    });
+
+    // Close the dropdown if clicked outside
+    document.addEventListener("click", (event: any) => {
+      if (
+        !dropdownButton.contains(event.target) &&
+        !dropdownMenu.contains(event.target)
+      ) {
+        dropdownMenu.classList.add("hidden");
+      }
+    });
+  });
+</script>

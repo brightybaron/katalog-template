@@ -1,0 +1,33 @@
+---
+const productData = (entry: any) => ({
+  title: entry.data.title,
+  slug: entry.id,
+  description: entry.data.description,
+  image: entry.data.image[0].src,
+  price: entry.data.price,
+  category: entry.data.category,
+});
+
+import ProductCardGrid from "./ProductCardGrid.astro";
+import ProductCardList from "./ProductCardList.astro";
+
+const { products } = Astro.props;
+---
+
+<!-- Grid View -->
+<div
+  id="gridView"
+  class="grid grid-cols-2 2xl:grid-cols-6 lg:grid-cols-5 gap-4 transition-all duration-500 ease-in-out transform"
+>
+  {products.map((entry: any) => <ProductCardGrid {...productData(entry)} />)}
+  <!-- <ProductCardGrid /> -->
+</div>
+
+<!-- List View -->
+<div
+  id="listView"
+  class="grid grid-cols-1 2xl:grid-cols-2 gap-4 transition-all duration-500 ease-in-out transform opacity-0 absolute top-0 left-0 w-full pointer-events-none"
+>
+  {products.map((entry: any) => <ProductCardList {...productData(entry)} />)}
+  <!-- <ProductCardList /> -->
+</div>

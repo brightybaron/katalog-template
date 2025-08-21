@@ -42,7 +42,7 @@ const Navbar = ({ currentPath }: { currentPath: string }) => {
         { name: "Cabinet", img: "/images/sofa-1.jpg", path: "/shop/cabinet" },
         { name: "Shelf", img: "/images/sofa-2.jpg", path: "/shop/shelf" },
         { name: "Couch", img: "/images/sofa-3.jpg", path: "/shop/couch" },
-        { name: "Others", img: "", path: "/shop" },
+        { name: "All Items", img: "", path: "/shop" },
       ],
     },
     { page: "Blog", path: "/blog" },
