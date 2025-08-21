@@ -1,12 +1,14 @@
 ---
 import ProductDetail from "@components/ProductDetail.astro";
 import MainLayout from "@layouts/MainLayout.astro";
+import entries from "@data/products.json"; // for preview only
 
 export async function getStaticPaths() {
-  const entries = await fetch("/data/products.json");
-  const products = await entries.json();
+  // const entries = await fetch("/data/products.json");
+  // const products = await entries.json();
+  // ^^^ for production, change the const and etc.
 
-  return products.map((product: any) => ({
+  return entries.map((product: any) => ({
     params: {
       category: product.category,
       slug: product.slug,
