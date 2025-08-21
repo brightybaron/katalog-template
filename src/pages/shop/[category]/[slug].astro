@@ -3,7 +3,9 @@ import ProductDetail from "@components/ProductDetail.astro";
 import MainLayout from "@layouts/MainLayout.astro";
 
 export async function getStaticPaths() {
-  const entries = await fetch("http://localhost:4321/data/products.json");
+  const entries = await fetch(
+    "https://katalog-template.pages.dev/data/products.json"
+  );
   const products = await entries.json();
 
   return products.map((product: any) => ({
