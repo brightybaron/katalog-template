@@ -1,9 +1,6 @@
 ---
-import ContainerProductView from "@components/ContainerProductView.astro";
-import NavTab from "@components/Navtab";
 import ViewProduct from "@components/ViewProduct";
 import MainLayout from "@layouts/MainLayout.astro";
-import { getCollection } from "astro:content";
 
 // const products = await getCollection("product");
 const response = await fetch(`${Astro.url.origin}/data/products.json`);
