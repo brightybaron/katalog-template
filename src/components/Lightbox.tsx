@@ -1,4 +1,4 @@
-import { useState, type MouseEvent, type TouchEvent } from "react";
+import { useEffect, useState, type MouseEvent, type TouchEvent } from "react";
 type Image = {
   src: string;
 };
@@ -63,6 +63,18 @@ const LightboxGaleri = ({ images, title }: LightboxProps) => {
       closeLightbox();
     }
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
 
   return (
     <>

@@ -7,12 +7,28 @@ const ViewSwitcher = ({ products }: any) => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [sortBy, setSortBy] = useState("");
   const [displayedProducts, setDisplayedProducts] = useState(products);
-  const [itemsToShow, setItemsToShow] = useState(20);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(20);
 
-  // Sort function
-  const sortProducts = (products: any[]) => {
-    if (!sortBy) return products;
-    return [...products].sort((a, b) => {
+  // Filter and sort function
+  const filterAndSortProducts = (products: any[]) => {
+    let filteredProducts = [...products];
+
+    // Filter by category if sorting by category
+    if (sortBy.startsWith("category-")) {
+      const category = sortBy.replace("category-", "");
+      filteredProducts = products.filter((product) => {
+        const productData = product.data || product;
+        return productData.category.toLowerCase() === category.toLowerCase();
+      });
+      // For category sorting, we don't need additional sorting since we're filtering
+      return filteredProducts;
+    }
+
+    // Sort for non-category options
+    if (!sortBy) return filteredProducts;
+
+    return filteredProducts.sort((a, b) => {
       const aData = a.data || a;
       const bData = b.data || b;
       switch (sortBy) {
@@ -24,36 +40,6 @@ const ViewSwitcher = ({ products }: any) => {
           return aData.title.localeCompare(bData.title);
         case "title-desc":
           return bData.title.localeCompare(aData.title);
-        case "category-chair":
-          return aData.category.toLowerCase() === "chair"
-            ? -1
-            : bData.category.toLowerCase() === "chair"
-            ? 1
-            : 0;
-        case "category-table":
-          return aData.category.toLowerCase() === "table"
-            ? -1
-            : bData.category.toLowerCase() === "table"
-            ? 1
-            : 0;
-        case "category-cabinet":
-          return aData.category.toLowerCase() === "cabinet"
-            ? -1
-            : bData.category.toLowerCase() === "cabinet"
-            ? 1
-            : 0;
-        case "category-shelf":
-          return aData.category.toLowerCase() === "shelf"
-            ? -1
-            : bData.category.toLowerCase() === "shelf"
-            ? 1
-            : 0;
-        case "category-couch":
-          return aData.category.toLowerCase() === "couch"
-            ? -1
-            : bData.category.toLowerCase() === "couch"
-            ? 1
-            : 0;
         default:
           return 0;
       }
@@ -70,13 +56,30 @@ const ViewSwitcher = ({ products }: any) => {
     }, 200);
   };
 
-  // Handle load more
-  const handleLoadMore = () => {
-    if (isTransitioning) return;
+  // Get filtered/sorted products
+  const processedProducts = filterAndSortProducts(products);
+
+  // Pagination calculations
+  const totalProducts = processedProducts.length;
+  const totalPages = Math.ceil(totalProducts / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+
+  // Handle page change
+  const handlePageChange = (page: number) => {
+    if (
+      page === currentPage ||
+      isTransitioning ||
+      page < 1 ||
+      page > totalPages
+    )
+      return;
     setIsTransitioning(true);
     setTimeout(() => {
-      setItemsToShow((prev) => prev + 20);
+      setCurrentPage(page);
       setIsTransitioning(false);
+      // Scroll to top when page changes
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }, 200);
   };
 
@@ -84,16 +87,22 @@ const ViewSwitcher = ({ products }: any) => {
   useEffect(() => {
     setIsTransitioning(true);
     const timeout = setTimeout(() => {
-      const sortedProducts = sortProducts(products);
-      setDisplayedProducts(sortedProducts.slice(0, itemsToShow));
+      const processedProducts = filterAndSortProducts(products);
+      setDisplayedProducts(processedProducts.slice(startIndex, endIndex));
       setIsTransitioning(false);
     }, 200);
 
     return () => clearTimeout(timeout);
-  }, [sortBy, products, itemsToShow]);
+  }, [sortBy, products, currentPage, startIndex, endIndex]);
+
+  // Reset to first page when sort changes
+  useEffect(() => {
+    if (currentPage !== 1) {
+      setCurrentPage(1);
+    }
+  }, [sortBy]);
 
   const productData = (entry: any) => {
-    // const data = entry.data || entry;
     const image = entry.image;
     return {
       title: entry.title,
@@ -105,8 +114,36 @@ const ViewSwitcher = ({ products }: any) => {
     };
   };
 
-  const totalProducts = products.length;
-  const showingCount = Math.min(itemsToShow, totalProducts);
+  // Generate page numbers for pagination
+  const getPageNumbers = () => {
+    const delta = 2; // Number of pages to show around current page
+    const range = [];
+    const rangeWithDots = [];
+
+    for (
+      let i = Math.max(2, currentPage - delta);
+      i <= Math.min(totalPages - 1, currentPage + delta);
+      i++
+    ) {
+      range.push(i);
+    }
+
+    if (currentPage - delta > 2) {
+      rangeWithDots.push(1, "...");
+    } else {
+      rangeWithDots.push(1);
+    }
+
+    rangeWithDots.push(...range);
+
+    if (currentPage + delta < totalPages - 1) {
+      rangeWithDots.push("...", totalPages);
+    } else {
+      if (totalPages > 1) rangeWithDots.push(totalPages);
+    }
+
+    return rangeWithDots;
+  };
 
   return (
     <div className="min-h-screen relative">
@@ -115,11 +152,17 @@ const ViewSwitcher = ({ products }: any) => {
         {/* Items counter */}
         <div className="flex items-center gap-2">
           <span className="text-sm text-gray-600">
-            Showing {showingCount} of {totalProducts} items
+            Showing {totalProducts > 0 ? startIndex + 1 : 0}-
+            {Math.min(endIndex, totalProducts)} of {totalProducts} items
+            {sortBy.startsWith("category-") && (
+              <span className="ml-2 px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium capitalize">
+                {sortBy.replace("category-", "")} only
+              </span>
+            )}
           </span>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-4 scale-90 sm:scale-100 justify-end">
           {/* Sort dropdown */}
           <div className="flex items-center gap-2">
             <label
@@ -228,15 +271,19 @@ const ViewSwitcher = ({ products }: any) => {
         )}
       </div>
 
-      {/* Load More Button */}
-      {showingCount < totalProducts && (
-        <div className="flex justify-center mt-8">
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="flex justify-center items-center mt-8 gap-2">
+          {/* Previous button */}
           <button
-            onClick={handleLoadMore}
-            className="px-6 py-3 bg-dark-green text-white rounded-lg hover:bg-green-800 transition-colors duration-300 flex items-center gap-2"
-            disabled={isTransitioning}
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1 || isTransitioning}
+            className={`px-3 py-2 rounded-lg flex items-center gap-1 transition-colors duration-300 ${
+              currentPage === 1 || isTransitioning
+                ? "bg-gray-200 text-gray-400 cursor-not-allowed"
+                : "bg-white border border-gray-300 text-gray-700 hover:bg-gray-50"
+            }`}
           >
-            <span>Load 20 More</span>
             <svg
               className="w-4 h-4"
               fill="none"
@@ -247,7 +294,56 @@ const ViewSwitcher = ({ products }: any) => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+            Previous
+          </button>
+
+          {/* Page numbers */}
+          <div className="flex gap-1">
+            {getPageNumbers().map((page, index) => (
+              <button
+                key={index}
+                onClick={() =>
+                  typeof page === "number" && handlePageChange(page)
+                }
+                disabled={page === "..." || isTransitioning}
+                className={`px-3 py-2 rounded-lg transition-colors duration-300 min-w-[40px] ${
+                  page === currentPage
+                    ? "bg-dark-green text-white"
+                    : page === "..."
+                    ? "bg-transparent text-gray-400 cursor-default"
+                    : "bg-white border border-gray-300 text-gray-700 hover:bg-gray-50"
+                }`}
+              >
+                {page}
+              </button>
+            ))}
+          </div>
+
+          {/* Next button */}
+          <button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages || isTransitioning}
+            className={`px-3 py-2 rounded-lg flex items-center gap-1 transition-colors duration-300 ${
+              currentPage === totalPages || isTransitioning
+                ? "bg-gray-200 text-gray-400 cursor-not-allowed"
+                : "bg-white border border-gray-300 text-gray-700 hover:bg-gray-50"
+            }`}
+          >
+            Next
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
               />
             </svg>
           </button>
